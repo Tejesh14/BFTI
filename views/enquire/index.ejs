@@ -1,0 +1,40 @@
+<%- include('../partials/header') %>        
+<%- include('../partials/navbar') %> 
+<div class="container">
+    <%- include('../partials/flash') %>  
+    <h1 class="display-5 mt-4 mb-4 text-center black-card-head"><span>Enquire Logs</span></h1>
+</div>
+    <div class="container con1">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Mobile No.</th>
+                    <th>Subject</th>
+                    <th>Message</th>
+                    <th>Created At</th>
+                    <th>Remove</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for(let i=contacts.length-1;i>=0;i--){ %>
+                    <tr>
+                        <td><%= contacts[i].name %></td> 
+                        <td><%= contacts[i].email %></td>
+                        <td><%= contacts[i].mobile %></td>
+                        <td><%= contacts[i].subject %></td>
+                        <td><%= contacts[i].message %></td>
+                        <td><%= dates[i] %></td>
+                        <td>
+                            <form action="/enquire/<%= contacts[i]._id %>?_method=DELETE " method="POST">
+                                <button class="btn" style="width: 70px;"><i class="fas fa-trash-alt"></i></button>
+                            </form>
+                        </td>
+                    </tr>
+                <% } %>
+            </tbody>
+            
+        </table> 
+    </div>
+<%- include('../partials/footer') %> 

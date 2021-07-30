@@ -1,0 +1,20 @@
+<%- include('../partials/header') %>
+<%- include('../partials/navbar') %>
+<main class="container blog-form">
+    <%- include('../partials/flash') %> 
+    <h1 class="black-card-head"><span>Login</span></h1>
+    <div class="col-md-8" style="margin: 10px auto;">
+        <form action="/login" method="POST" class="needs-validation" novalidate>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Username</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" name="username" placeholder="Enter Username" required>
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput3" class="form-label">Password</label>
+                <input type="password" class="form-control" id="exampleFormControlInput3" name="password" placeholder="Enter Password" required>
+            </div>
+            <button class="btn btn-dark">Login</button>
+        </form>
+    </div>
+</main>
+<%- include('../partials/footer') %>

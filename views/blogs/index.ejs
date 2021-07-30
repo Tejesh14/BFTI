@@ -1,0 +1,17 @@
+<%- include('../partials/header') %> 
+<%- include('../partials/navbar') %> 
+<div class="container blogs-box">
+    <%- include('../partials/flash') %>
+    <h1 class="black-card-head"><span>Our Blogs</span></h1> 
+        <div class="card-group">
+          <% for(let b of blog) {%>
+            <div class="card">
+              <a href="/blogs/<%= b._id %>"><img src="<%= b.img1 %> " class="card-img-top" alt="..."></a>
+              <div class="card-body">
+                <h5 class="card-title"><a href="/blogs/<%= b._id %>"><%= b.title %> </a></h5>
+              </div>
+            </div>
+          <% } %>  
+      </div>
+  </div>
+<%- include('../partials/footer') %> 

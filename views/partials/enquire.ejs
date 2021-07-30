@@ -1,0 +1,35 @@
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <!-- <h3 class="mt-1">Enquire Form</h3> -->
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form action="/enquire" method="POST">
+            <div class="mb-3">
+              <label for="recipient-name" class="col-form-label text-start">Name :</label>
+              <input type="text" class="form-control" id="recipient-name" name="name">
+            </div>
+            <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">Email :</label>
+                <input type="email" class="form-control" id="recipient-name" name="email">
+              </div>
+              <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">Contact No. :</label>
+                <input type="text" class="form-control" id="recipient-name" name="mobile">
+              </div>
+              <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">Subject :</label>
+                <input type="text" class="form-control" id="recipient-name" name="subject">
+              </div>
+            <div class="mb-3">
+              <label for="message-text" class="col-form-label">Message :</label>
+              <textarea class="form-control" id="message-text" name="message"></textarea>
+            </div>
+            <button class="btn btn-dark">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,30 @@
+<%- include('../partials/header') %>
+<%- include('../partials/navbar') %>
+    <main class="container blog">
+        <%- include('../partials/flash') %>
+        <h1 class="black-card-head m-3"><span><%= data.title %></span></h1>
+        <div class="card mb-3">
+            <img src="<%= data.img1 %> " class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text date-author">
+                    <small class="text-muted">Posted By:- <%= data.author %> </small>
+                    <small class="text-muted">Posted On:- <%= date %> </small>
+                </p>
+                <p class="card-text mt-3 text-start"><%= data.para1 %> </p>
+                <img src="<%= data.img2 %> " class="card-img-top  mt-3" alt="...">
+                <p class="card-text mt-3 text-start"><%= data.para2 %> </p>
+                <img src="<%= data.img3 %> " class="card-img-top  mt-3" alt="...">
+                <p class="card-text mt-3 text-start"><%= data.para3 %> </p>
+                <img src="<%= data.img4 %> " class="card-img-top mt-3" alt="...">
+                <p class="card-text mt-3 text-start"><%= data.para4 %> </p>
+            </div>
+
+            <% if(currentUser) {%>
+                <a href="/blogs/<%= data._id %>/edit" class="btn-sm btn-dark edit-btn">Edit</a>
+                <form action="/blogs/<%= data._id %>?_method=DELETE" method="POST" style="margin: 5px;">
+                    <button class="btn-sm btn-dark">Delete</button>
+                </form>
+            <% } %>  
+          </div>
+    </main>
+<%- include('../partials/footer') %>

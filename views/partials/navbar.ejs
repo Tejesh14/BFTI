@@ -1,0 +1,31 @@
+<!-- Navbar start -->
+<div class="nav-container">
+    <nav class="navbar">
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <div class="logo" style="height: 100%;">
+            <a href="/"><img src="/images/Bollygrad Film & Television Institute.png" width="145" alt="Logo"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <% if(!currentUser) {%>
+                <li><a href="/courses">&nbsp;&nbsp;Courses</a></li>
+                <li><a href="/production">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Production</a></li>
+                <li><a href="/faculties">&nbsp;&nbsp;Faculties</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/blogs">Blogs</a></li>
+                <li><a href="/login">Login</a></li>
+            <% } else{%>
+                <li><a href="/blogs">Blogs</a></li>
+                <li><a href="/enquire">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Enquiry Forms</a></li>
+                <li><a href="/blogs/new">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create Blog</a></li>
+                <li><a class="disabled">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hello <%= currentUser.username %> </a></li>
+                <li><a href="/Logout">Logout</a></li>
+            <% } %>  
+        </ul>
+    </nav>
+</div>
+<!-- Navbar End -->

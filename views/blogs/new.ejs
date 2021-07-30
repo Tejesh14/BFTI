@@ -1,0 +1,51 @@
+<%- include('../partials/header') %>
+<%- include('../partials/navbar') %>
+<main class="container blog-form">
+    <h1 class="black-card-head"><span>Create Blog</span></h1>
+    <div class="col-md-8" style="margin: 10px auto;">
+        <form action="/blogs" method="POST" class="needs-validation" novalidate>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Title</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" name="title" placeholder="Title of the Blog" required>
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput2" class="form-label">Image 1</label>
+                <input type="url" class="form-control" id="exampleFormControlInput2" name="img1" placeholder="Enter URL of Image" required>
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput3" class="form-label">Author</label>
+                <input type="text" class="form-control" id="exampleFormControlInput3" name="author" placeholder="Enter name of Bloger" required>
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" name="para1" rows="3" required></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput4" class="form-label">Image 2</label>
+                <input type="url" class="form-control" id="exampleFormControlInput4" name="img2" placeholder="Enter URL of Image" required>
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea2" class="form-label">Description</label>
+                <textarea class="form-control" id="exampleFormControlTextarea2" name="para2" rows="3" required></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput5" class="form-label">Image 3</label>
+                <input type="url" class="form-control" id="exampleFormControlInput5" name="img3" placeholder="Enter URL of Image" required>
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea3" class="form-label">Description</label>
+                <textarea class="form-control" id="exampleFormControlTextarea3" name="para3" rows="3" required></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput6" class="form-label">Image 4</label>
+                <input type="url" class="form-control" id="exampleFormControlInput6" name="img4" placeholder="Enter URL of Image" required>
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea4" class="form-label">Description</label>
+                <textarea class="form-control" id="exampleFormControlTextarea4" name="para4" rows="3" required></textarea>
+            </div>
+            <button class="btn btn-dark">Create</button>
+        </form>
+    </div>
+</main>
+<%- include('../partials/footer') %>
